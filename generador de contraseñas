@@ -1,0 +1,13 @@
+import random
+
+caracteres = ("+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890")
+
+cara = int(input("¿Cuantos caracteres quieres que tenga tu contraseña?: "))
+
+contraseña = []
+
+for i in range(cara):
+    r = random.choice(caracteres)
+    contraseña.append(r)
+
+print("tu contraseña es: ", contraseña)
