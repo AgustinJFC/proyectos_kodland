@@ -13,16 +13,31 @@ async def on_ready():
 
 @bot.command()
 async def hello(ctx):
-    await ctx.send(f'Hola, soy un bot {bot.user}!')
+    await ctx.send(f'Hola, soy un bot {bot.user}! y mi funcion es recomendar! Para ver la lista de comandos escribe $comand ')
+
+@bot.command()
+async def comand(ctx):
+    await ctx.send(f'La lista de comandos son : $refood (Para recomendar comida)    $removie (Para recomendar peliculas)    $reband (Para recomendar bandas)    $rebooks (No son las zapatillas, es para recomendar libros)')
 
 @bot.command()
 async def heh(ctx, count_heh = 5):
     await ctx.send("he" * count_heh)
 
 @bot.command()
-async def recomienda_una_comida(ctx):
-    await ctx.send(random.choice(["Pollo con arroz es una buena comida","Tallarines es una buena idea","Pure se una buena alternativa","Hamburguesas son ricas"])'
+async def refood (ctx):
+    await ctx.send(random.choice(["https://tofuu.getjusto.com/orioneat-local/resized2/cpzmaeuy9p8Khf7TD-1200-1200.webp","https://cocina-casera.com/wp-content/uploads/2018/04/tallarines-rojos.jpg","https://cocinemosjuntos.com.co/media/mageplaza/blog/post/r/e/recetas-sencillas-y-deliciosas-de-pure-de-papa_1_.jpg","https://phantom-marca.unidadeditorial.es/813d16708dc72860fd3cf319c9a245b5/resize/828/f/jpg/assets/multimedia/imagenes/2023/08/04/16911461030527.jpg","https://images.hola.com/imagenes/cocina/recetas/20171013100547/receta-sopa-pollo/0-741-140/sopa-pollo-t.jpg","https://cdn0.recetasgratis.net/es/posts/9/2/8/lasana_57829_orig.jpg","https://www.cocina-chilena.com/base/stock/Recipe/567-image/567-image_web.jpg","https://www.daff.cl/583-large_default/porotos-con-riendas.jpg"]))
 
+
+
+@bot.command()
+async def removie (ctx):
+    await ctx.send(random.choice(["https://static.wikia.nocookie.net/doblaje/images/4/4e/SCR1Cartel1.jpg/revision/latest/thumbnail/width/360/height/450?cb=20150816005052&path-prefix=es","https://pics.filmaffinity.com/Forrest_Gump-212765827-large.jpg","https://pics.filmaffinity.com/Taxi_para_tres-511371280-large.jpg","https://pics.filmaffinity.com/Miguel_San_Miguel-697290160-large.jpg","https://static.wikia.nocookie.net/31minutos/images/a/a7/31_minutos-La_pelicula-afiche_vertical.png/revision/latest?cb=20200719012406","https://pics.filmaffinity.com/Sufre_mamaon-853089540-large.jpg","https://pics.filmaffinity.com/Gringuito-941519285-large.jpg","https://static.wikia.nocookie.net/doblaje/images/2/26/Whiplash-musica-y-obsesion-pelicula-dvd.jpg/revision/latest?cb=20190728031835&path-prefix=es"]))
+
+
+
+@bot.command()
+async def reband (ctx):
+    await ctx.send(random.choice(["https://www.selloalerce.cl/wp-content/uploads/ab67616d0000b273e5a77dbd44d884798f48ca90.jpg","https://copano.news/site-media/images/los_prisioneros-600x503.jpg","https://holawave.store/cdn/shop/articles/gorillaz-descarga-download-320_1024x1024.jpg?v=1521690379","https://www.claudionarea.cl/wp-content/uploads/2015/10/narea2.jpg","https://www.rockaxis.com/img/newsList/2738286.jpg","https://static.qobuz.com/images/playlists/8389084_a0e858ceaedd0c573c45df86448d3464_rectangle.jpg","https://i.ytimg.com/vi/LwCvgcLV5lk/sddefault.jpg","https://www.rockandpop.cl/wp-content/uploads/2021/06/1200px-7C396001-AA89-4EF5-8732-342FE9276B38.jpg","https://http2.mlstatic.com/D_NQ_NP_890619-MLC54803624775_042023-O.webp","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStfR0FxcsULo6Uzm6fiBRBr2ZD9tetM0hedtQ&usqp=CAU"]))
 
 
 bot.run("token")
